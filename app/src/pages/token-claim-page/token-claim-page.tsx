@@ -6,7 +6,7 @@ import styles from "./token-claim-page.module.scss";
 const TokenClaimPage: React.FC = () => {
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>Claim Your Tokens</h1>
+            <h1 className={styles.title}>Claim Tokens</h1>
             <ConnectWalletButton />
             <TokenClaimSection />
         </div>
