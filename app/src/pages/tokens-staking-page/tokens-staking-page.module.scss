@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #130242, rgb(58 122 255 / 93%));
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #e0e0ff;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  .container {
+    gap: 24px;
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #1d0c6b, rgb(6 11 25));
+  }
+}

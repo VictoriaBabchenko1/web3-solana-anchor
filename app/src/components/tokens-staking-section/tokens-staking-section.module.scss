@@ -1,0 +1,224 @@
+.stakingContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background: #121e3c;
+    padding: 36px;
+    border-radius: 16px;
+    color: #ffffff;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.statusBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balanceBlock {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.walletStatus {
+    background: #1c2e4a;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #c3daf4;
+}
+
+.content {
+    display: flex;
+    gap: 24px;
+}
+
+.stakeBox, .rewardBox {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    gap: 20px;
+}
+
+.stakeBox, .rewardTop, .status {
+    background: #1a2948;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.stakeBoxTitle, .rewardBoxTitle, .statusBoxTitle {
+    font-size: 20px;
+    font-weight: 550;
+    padding-bottom: 10px;
+}
+
+.rewardTop {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .rewardBoxTitle {
+        padding-bottom: 0;
+    }
+}
+
+.claimRewardSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.rewardAmount {
+    font-size: 30px;
+    font-weight: 570;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.statusItem {
+    display: flex;
+    justify-content: space-between;
+
+    .label {
+        color: #ffffffaa;
+    }
+}
+
+.input, .select {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    background: #2a3c65;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.stakeBtn, .claimRewardBtn, .unstakeBtn {
+    padding: 10px 24px;
+    background-color: #397aff;
+    color: white;
+    font-size: 16px;
+    font-weight: 550;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s;
+    overflow: hidden;
+}
+
+.claimRewardBtn, .claimRewardBtn.submittingBtn:disabled {
+    background-color: #512da8;
+}
+
+.unstakeBtn, .unstakeBtn.submittingBtn:disabled {
+    width: 100%;
+    background-color: #560f1d;
+}
+
+.stakeBtn.submittingBtn:disabled {
+    background-color: #397aff;
+}
+
+button:disabled {
+    background-color: #444c5e;
+    pointer-events: none;
+}
+
+.submittingBtn {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -150%;
+        width: 250%;
+        height: 100%;
+        background: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.3) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        animation: shimmer 1.6s infinite;
+        pointer-events: none;
+    }
+}
+
+.errorMessage {
+    color: #aa0525;
+    font-size: 18px;
+    align-self: center;
+}
+
+.buttonBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .stakingContainer {
+        padding: 0;
+        gap: 20px;
+        width: 100%;
+        background: none;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .stakeBoxTitle, .statusBoxTitle, .rewardBoxTitle {
+        align-self: center;
+    }
+
+    .statusBlock {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .rewardAmount {
+        align-self: center;
+    }
+
+    .claimRewardSection{
+        gap: 10px;
+        align-items: unset;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stakeBox, .rewardBox {
+        width: 100%;
+        gap: 10px;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%;
+    }
+}

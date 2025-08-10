@@ -1,0 +1,47 @@
+{
+  "license": "ISC",
+  "scripts": {
+    "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
+    "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check",
+    "fund-vault-pda": "yarn ts-node programs/airdrop/src/scripts/fund-vault-pda.ts",
+    "init-whitelist": "yarn ts-node programs/airdrop/src/scripts/init-whitelist.ts",
+    "add-to-whitelist": "yarn ts-node programs/airdrop/src/scripts/add-to-whitelist.ts",
+    "remove-from-whitelist": "yarn ts-node programs/airdrop/src/scripts/remove-from-whitelist.ts",
+    "delete-whitelist": "yarn ts-node programs/airdrop/src/scripts/delete-whitelist.ts",
+    "generate-keypair": "yarn ts-node programs/airdrop/src/scripts/generate-keypair.ts",
+    "create-token-with-meta": "yarn ts-node programs/airdrop/src/scripts/create-token-with-meta.ts",
+    "mint-nft": "yarn ts-node programs/nft_airdrop/src/scripts/mint-nft.ts",
+    "transfer-minted-nft-to-wallet": "yarn ts-node programs/nft_airdrop/src/scripts/transfer-minted-nft-to-wallet.ts",
+    "init-nft-airdrop": "yarn ts-node programs/nft_airdrop/src/scripts/initialize-airdrop.ts",
+    "close-nft-airdrop": "yarn ts-node programs/nft_airdrop/src/scripts/close-airdrop.ts",
+    "reset-nft-claim-status": "yarn ts-node programs/nft_airdrop/src/scripts/reset-claim-status.ts",
+    "mint-nfts-to-list": "yarn ts-node programs/nft_airdrop/src/scripts/mint-nfts-to-list.ts",
+    "delete-nfts-mint-list": "yarn ts-node programs/nft_airdrop/src/scripts/delete-mint-list.ts",
+    "transfer-nfts-to-vault": "yarn ts-node programs/nft_airdrop/src/scripts/transfer-nfts-to-vault.ts",
+    "init-staking": "yarn ts-node programs/spl_token_staking/src/scripts/initialize-staking.ts",
+    "fund-reward-vault": "yarn ts-node programs/spl_token_staking/src/scripts/fund-reward-vault-pda.ts",
+    "close-staking": "yarn ts-node programs/spl_token_staking/src/scripts/close-staking.ts"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.31.1",
+    "@metaplex-foundation/mpl-token-metadata": "^3.4.0",
+    "@metaplex-foundation/umi": "^1.2.0",
+    "@metaplex-foundation/umi-bundle-defaults": "^1.2.0",
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.98.2",
+    "dotenv": "^16.5.0",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.0",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^22.15.21",
+    "@types/readline-sync": "^1.4.8",
+    "chai": "^4.3.4",
+    "mocha": "^9.0.3",
+    "prettier": "^2.6.2",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^5.7.3"
+  }
+}
